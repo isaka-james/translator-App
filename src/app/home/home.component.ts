@@ -13,7 +13,7 @@ export class HomeComponent {
   data: any[] = []; // Store the response text from the server
   private httpClient = inject(HttpClient);
 
-  private apiLink: string = "http://localhost:5000/translate";
+  private apiLink: string = "https://transalateapi.vercel.app/translate";
 
   language: string = 'swahili'; // Store language to convert to(default==="swahili")
   inText: string =''; // Store the input sentences to be translated(input)
