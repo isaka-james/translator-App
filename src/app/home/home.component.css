@@ -1,0 +1,226 @@
+@keyframes glowing-container{
+    0% {
+     box-shadow: 0 0 250px rgba(30, 145, 171, 0.5); 
+    }
+   10% {
+     box-shadow: 0 0 100px rgba(30, 93, 171, 0.5); 
+     }
+   20% {
+     box-shadow: 0 0 200px rgba(30, 171, 169, 0.5); 
+   }
+   30% {
+     box-shadow: 0 0 400px rgba(30, 49, 171, 0.5); 
+   }
+   40% {
+     box-shadow: 0 0 300px rgba(30, 35, 171, 0.5); 
+   }
+   50% {
+     box-shadow: 0 0 150px rgba(131, 30, 171, 0.5); 
+   }
+   60% {
+     box-shadow: 0 0 250px rgba(171, 30, 133, 0.5); 
+   }
+   70% {
+     box-shadow: 0 0 100px rgba(171, 30, 86, 0.5); 
+   }
+   80% {
+     box-shadow: 0 0 250px rgba(30, 171, 30, 0.5); 
+   }
+   90% {
+     box-shadow: 0 0 350px rgba(164, 171, 30, 0.5); 
+   }
+   100% {
+     box-shadow: 0 0 200px rgba(171, 70, 30, 0.5); 
+   }
+
+}
+
+
+@keyframes color-change-blue {
+ 0% {
+   color: #283c88;
+ }
+ 25% {
+   color: #193a5d;
+ }
+ 50% {
+   color: #004080;
+ }
+ 75% {
+   color: #163880;
+ }
+ 100% {
+   color: #122572;
+ }
+}
+
+
+@keyframes dancing-blur {
+ 0% {
+   opacity: 65%;
+ }
+ 25% {
+     opacity: 70%;
+ }
+ 50% {
+     opacity: 75%;
+ }
+ 75% {
+     opacity: 72%;
+ }
+ 100% {
+     opacity: 68%;
+ }
+}
+
+/* The bluing container */
+.container{
+ background-color: white;
+ border-radius: 12px;
+ display: flex;
+ padding-top: 3%;
+
+ animation: glowing-container 40s infinite;
+}
+
+
+/* Title for the translate App */
+.title{
+ text-align: center;
+ font-size: 45px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 900;
+ margin-bottom: 2%;
+
+ animation: color-change-blue 4s infinite;
+
+}
+
+.choose{
+ font-size: 12px;
+ margin-left: 5%;
+ font-weight: 100;
+
+}
+.chooseBox{
+ stroke-opacity: 100%;
+ padding: 5px 12px;
+ font-size: 18px;
+ background-color: white;
+ border-color: blue;
+ border-start-end-radius: 12px;
+
+}
+
+.inputText{
+ border-radius: 12px;
+ border-color: blue;
+ min-height: 150px;
+ min-width: 300px;
+ font-size: 18px;
+}
+.inputText:focus{
+ border: 2px solid blue !important;
+ outline: none;
+ 
+}
+
+.copyButton{
+ float: right;
+ padding: 5px 14px;
+ margin-left: 12px;
+ margin-bottom: 20%;
+}
+
+.copyButton:hover{
+ transform: scale(1.3);
+}
+.outputText{
+ margin-top: 5%;
+ margin-left: 5%;
+ margin-right: 5%;
+ margin-bottom: 25%;
+ opacity: 50%;
+ font-style: italic;
+ font-size: 23px;
+}
+
+p{
+ color: blue;
+}
+
+.error{
+ margin-left: 50px;
+ margin-top: 15px;
+ padding-bottom: 2em;
+ padding: 12px 20px;
+ color: white;
+ background-color: rgb(23, 24, 26);
+ border-bottom-right-radius: 12px;
+ font-weight: 200;
+ opacity: 75%;
+ max-width: 150px;
+ text-align: center;
+
+ animation: dancing-blur 1.2s infinite;
+}
+
+/* Styles for the smart phones */
+@media only screen and (max-width: 767px) {
+ .container{
+     display: block;
+     margin-left: 10%;
+     margin-right: 10%;
+     margin-top: 5%;
+     background-color: white;
+     border-radius: 12px;
+     padding-top: 15%;
+     box-shadow: 0 0 100px rgba(30, 93, 171, 0.5); 
+
+ }
+ .inputText{
+     margin-left: 5%;
+     margin-top: 2%;
+     margin-right: 5%;
+
+ }
+ .choose{
+     font-size: 12px;
+     margin-left: 5%;
+     font-weight: 100;
+     text-align: right;
+     margin-right: 15%;
+ 
+ }
+
+}
+
+
+
+/* Style for the tables and desktops */
+@media only screen and (min-width: 768px) {
+ .container{
+     display: block;
+     margin-left: 30%;
+     margin-right: 30%;
+     margin-top: 2%;
+
+ }
+ .inputText{
+     margin-left: 10%;
+     margin-top: 2%;
+     margin-right: 10%;
+     min-height: 150px;
+     min-width: 300px;
+ }
+ .choose{
+     font-size: 12px;
+     margin-left: 5%;
+     font-weight: 100;
+     text-align: center;
+  
+ 
+ }
+
+
+}

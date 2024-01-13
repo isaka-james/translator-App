@@ -1,0 +1,40 @@
+<div class="container">
+
+    <div class="title">Translate App</div>
+
+    <div class="choose">
+        <label class="">Translate to: </label>
+        <select 
+            #select
+            id="description"
+            name="language"
+            (click)="onChange('language',select.value)"
+            class="chooseBox">
+                <option value="swahili">Swahili</option>
+                <option value="english">English</option>
+                <option value="french">French</option>
+                <option value="german">German</option>
+                <option value="spanish">Spanish</option>
+        </select>
+    </div>
+    
+    <textarea 
+        #textArea
+        class="inputText" 
+        name="inputLang"  
+        placeholder="Your sentence here..." 
+        (input)="onChange('inText',textArea.value)"
+        autofocus></textarea>
+
+    <div  *ngIf="outText" class="outputText">
+        <button 
+            (click)="copy()"
+            class="copyButton">{{ copyShow }}</button>
+        <p>“{{ outText }}”</p>
+        
+    </div>
+
+    <div *ngIf="errorMsg" class="error">{{ errorMsg }}</div>
+
+    <div style="padding-bottom: 25px !important;"></div>
+</div>
