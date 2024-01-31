@@ -94,7 +94,7 @@ export class HomeComponent {
 
           if(response['success']){
               this.errorMsg=''; // disable the error
-              this.data=response['translations_swahili'];
+              this.data=response['translations'];
               console.log(`2. Translated sentences translated successfully: "${this.data[0]}"`);
 
               // For now we have only one sentence
